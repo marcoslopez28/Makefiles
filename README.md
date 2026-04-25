@@ -120,20 +120,16 @@ Esto no afecta el resultado. El error únicamente ocurrió porque MSYS2 no tiene
 
 ---
 
-## Explicación del Makefile Julia
+## Explicación del Makefile (Julia)
 
-Este Makefile sirve para automatizar todo el proceso de generar el conjunto de Julia, desde compilar el programa hasta crear la imagen final.
+Este Makefile automatiza todo el proceso de generación del conjunto de Julia, desde la compilación del programa hasta la creación de la imagen final.
 
-Se utilizó el comando:
+Se utilizó el comando desde la terminal:
 
 ```bash
 cat Makefile
 ```
 para visualizar el contenido y analizar su estructura.
-
-## Explicación del Makefile (Julia)
-
-Este Makefile automatiza todo el proceso de generación del conjunto de Julia, desde la compilación del programa hasta la creación de la imagen final.
 
 ### Variables principales
 
