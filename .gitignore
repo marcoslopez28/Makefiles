@@ -1,6 +1,20 @@
+# Archivos ejecutables
 *.exe
+*.out
+*.app
+
+# Archivos objeto y compilación
 *.o
-*.log
+*.obj
+*.a
+*.so
+*.dll
+*.lib
+
+# Archivos temporales
 *.tmp
+*.temp
+*.log
 *.bak
-.DS_Store
+*.swp
+*.swo
