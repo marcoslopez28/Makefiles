@@ -25,7 +25,7 @@ La ejecución se realizó en **MSYS2 UCRT64**, ya que este Makefile utiliza sint
 ### Entrar a la carpeta
 
 ```bash
-cd /Embedded-Systems-IoT/Makefiles/julia
+cd /julia
 ```
 
 ### Limpiar archivos generados
