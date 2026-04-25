@@ -26,6 +26,22 @@ La ejecución se realizó en **MSYS2 UCRT64**, ésta es una herramienta que perm
 
 https://code.visualstudio.com/docs/cpp/config-mingw
 
+### Herramientas utilizadas
+
+Para ejecutar correctamente el proyecto `julia` fue necesario instalar desde MSYS2 UCRT64:
+
+```bash
+pacman -S mingw-w64-ucrt-x86_64-gcc
+pacman -S mingw-w64-ucrt-x86_64-make
+pacman -S mingw-w64-ucrt-x86_64-gnuplot
+```
+
+Estas herramientas permitieron:
+
+* compilar programas en C y C++
+* ejecutar el Makefile
+* generar la gráfica final con gnuplot
+
 ---
 
 ### Entrar a la carpeta
