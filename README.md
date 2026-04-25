@@ -108,6 +108,13 @@ Esto no afecta el resultado. El error únicamente ocurrió porque MSYS2 no tiene
 
 Este Makefile sirve para automatizar todo el proceso de generar el conjunto de Julia, desde compilar el programa hasta crear la imagen final.
 
+Se utilizó el comando:
+
+```bash
+cat Makefile
+```
+para visualizar el contenido y analizar su estructura.
+
 CXX = g++
 
 Indica que se usará el compilador de C++.
