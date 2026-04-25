@@ -129,6 +129,7 @@ Es el archivo que usa gnuplot para generar la gráfica.
 all
 
 Es la opción principal.
+
 Cuando se escribe:
 
 make
