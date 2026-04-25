@@ -1,12 +1,12 @@
-# Proyecto Makefile - Uso y documentación de Makefiles
+# Proyecto Makefile - Documentación de Makefile
 
 ## Descripción
 
-En esta práctica se trabajó con Makefiles para comprender cómo ayudan a automatizar procesos de compilación, ejecución, limpieza y organización de proyectos de programación.
+En esta práctica se trabajó con Makefiles para comprender cómo ayudan a automatizar procesos de compilación, ejecución, limpieza y organización de proyectos de programación, ambos proyectos son detallados en este documento.
 
-Primero se analizó el Makefile de ejemplo proporcionado en el repositorio del profesor, específicamente en la carpeta **julia**.
+Primero se analizó el Makefile de ejemplo proporcionado en el repositorio del profesor, en la carpeta **julia**.
 
-Después se desarrolló un proyecto propio llamado **Conversor de Temperatura para IoT**, en el cual se implementó un Makefile para automatizar la compilación, ejecución y limpieza del programa.
+Después se desarrolló un proyecto llamado **Conversor de Temperatura para IoT**, en el cual se agregó un Makefile para automatizar la compilación, ejecución y limpieza del programa.
 
 ---
 
@@ -14,9 +14,7 @@ Después se desarrolló un proyecto propio llamado **Conversor de Temperatura pa
 
 ## Breve explicación del proyecto
 
-El proyecto de ejemplo llamado **julia** genera el conjunto de Julia, una representación gráfica matemática que posteriormente se convierte en una imagen `.png` utilizando gnuplot.
-
-Este ejemplo permite observar cómo un Makefile puede automatizar no solo la compilación de un programa, sino también su ejecución, la generación de archivos intermedios y la creación de resultados visuales.
+El proyecto de ejemplo "**julia**" genera el conjunto de Julia, es una representación gráfica matemática que después se convierte en una imagen `.png` utilizando gnuplot. Este ejemplo permite observar cómo un Makefile puede automatizar no solo la compilación de un programa, sino también su ejecución, la generación de archivos y la creación de resultados.
 
 ---
 
@@ -27,7 +25,7 @@ La ejecución se realizó en **MSYS2 UCRT64**, ya que este Makefile utiliza sint
 ### Entrar a la carpeta
 
 ```bash
-cd /c/Users/nonba/OneDrive/Documentos/IoT/Embedded-Systems-IoT/Makefiles/julia
+cd /Embedded-Systems-IoT/Makefiles/julia
 ```
 
 ### Limpiar archivos generados
@@ -39,7 +37,7 @@ make clean
 Este comando elimina:
 
 * archivos objeto (`.o`)
-* ejecutable `julia`
+* ejecutables `julia`
 * archivos `.txt`
 * imágenes `.png`
 
@@ -67,7 +65,7 @@ Esto realiza automáticamente:
 ls
 ```
 
-Aquí se puede observar la creación de:
+Una vez eecutado el Makefile, quí se puede observar la creación de:
 
 * `main.o`
 * `julia`
@@ -90,19 +88,19 @@ gnuplot julia_set.gp
 
 Esto confirma que el Makefile automatizó correctamente todo el proceso.
 
-Al final apareció el mensaje:
+En algunos casos, al final puede aparecer el mensaje:
 
 ```bash
 xdg-open: command not found
 ```
 
-Esto no afectó el resultado, ya que el archivo `julia_set.png` sí fue generado correctamente. El error únicamente ocurrió porque MSYS2 no tiene instalado el comando `xdg-open` para abrir imágenes automáticamente.
+Esto no afecta el resultado. El error únicamente ocurrió porque MSYS2 no tiene instalado el comando `xdg-open` para abrir imágenes automáticamente.
 
 ---
 
-## Explicación del Makefile
+## Explicación del Makefile Julia
 
-Se utilizó el comando:
+Se utiliza el comando:
 
 ```bash
 cat Makefile
@@ -120,7 +118,7 @@ Define el compilador de C++ utilizado.
 
 Opciones de compilación:
 
-* `-std=c++23` utiliza el estándar moderno de C++
+* `-std=c++23` utiliza stánel edar moderno de C++
 * `-O3` aplica una optimización alta del programa
 
 ### GP = julia_set.gp
@@ -197,15 +195,15 @@ Esto demuestra cómo el Makefile ayuda a automatizar procesos y facilita el trab
 
 ## Breve explicación del proyecto
 
-Se desarrolló un programa en lenguaje C que funciona como un conversor de temperatura.
+Se desarrolló un programa en lenguaje C que funciona como un conversor de temperatura sencillo.
 
-Permite convertir:
+Puede convertir:
 
 1. Celsius a Fahrenheit
 2. Fahrenheit a Celsius
 3. Celsius a Kelvin
 
-Este proyecto fue elegido porque en aplicaciones IoT es común trabajar con sensores de temperatura, por lo que resulta un ejemplo sencillo pero relacionado con la materia.
+Hice éste proyecto porque en aplicaciones IoT es común trabajar con sensores de temperatura, por lo que me pareció un ejemplo sencillo pero relacionado con la materia.
 
 ---
 
@@ -214,17 +212,14 @@ Este proyecto fue elegido porque en aplicaciones IoT es común trabajar con sens
 ```text
 makefile-temperatura-iot/
 ├── main.c
-├── Makefile
-├── README.md
-├── .gitignore
-└── evidencia/
+└── Makefile
 ```
 
 ---
 
 ## Instrucciones para ejecutar
 
-En Windows con MinGW se utilizó:
+Desde la terminal de Windows, con MinGW se utilizó:
 
 ### Compilar
 
@@ -232,7 +227,7 @@ En Windows con MinGW se utilizó:
 mingw32-make
 ```
 
-Esto genera:
+Esto nos genero:
 
 * `main.o`
 * `temperatura.exe`
@@ -376,8 +371,6 @@ Contenido utilizado:
 .DS_Store
 ```
 
-Esto mantiene el repositorio limpio y profesional.
-
 ---
 
 # Evidencias
@@ -385,7 +378,7 @@ Esto mantiene el repositorio limpio y profesional.
 En la carpeta **evidencia** se incluyen capturas de:
 
 * ejecución del Makefile de ejemplo (julia)
-* generación de archivos y gráfica
+* generación de archivos
 * contenido del Makefile del ejemplo
 * compilación del proyecto propio
 * ejecución del conversor de temperatura
@@ -393,12 +386,12 @@ En la carpeta **evidencia** se incluyen capturas de:
 * uso de `rebuild`
 * estructura final del repositorio
 
+De igual manera, las evidencias pueden ser utlizadas como una guía de uso de los proyectos, ya que se muestra el paso a paso de su ejecución
+
 ---
 
 # Conclusión
 
 El uso de Makefiles permite automatizar procesos importantes dentro de un proyecto de programación, especialmente en compilación, ejecución y limpieza de archivos.
 
-Durante esta práctica se comprobó que tanto en el ejemplo del profesor como en el proyecto propio, el Makefile ayuda a reducir trabajo manual, evitar errores y mantener una mejor organización.
-
-Además, el uso de `.gitignore` y una buena documentación en README hacen que el repositorio sea más limpio, entendible y fácil de compartir con otras personas.
+Durante esta práctica se comprobó que tanto en el ejemplo del profesor como en mi proyecto, el Makefile ayuda a reducir trabajo manual, evitar errores y mantener una mejor organización.
