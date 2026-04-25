@@ -20,7 +20,7 @@ El proyecto de ejemplo "**julia**" genera el conjunto de Julia, es una represent
 
 ## Instrucciones para ejecutar
 
-La ejecución se realizó en **MSYS2 UCRT64**, ya que este Makefile utiliza sintaxis estilo Linux como `./julia`, la cual funciona mejor en este entorno que en CMD de Windows.
+La ejecución se realizó en **MSYS2 UCRT64**, ésta es una herramienta que permite usar en Windows una terminal parecida a Linux, junto con compiladores y utilidades que normalmente no vienen instaladas en Windows, ya que este Makefile utiliza sintaxis estilo Linux como `./julia`, la cual funciona mejor en este entorno que en CMD de Windows.
 
 ### Entrar a la carpeta
 
