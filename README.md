@@ -131,61 +131,94 @@ cat Makefile
 ```
 para visualizar el contenido y analizar su estructura.
 
-CXX = g++
+## Explicación del Makefile (Julia)
 
-Indica que se usará el compilador de C++.
+Este Makefile automatiza todo el proceso de generación del conjunto de Julia, desde la compilación del programa hasta la creación de la imagen final.
 
-CXXFLAGS = -std=c++23 -O3
+### Variables principales
+
+### `CXX = g++`
+
+Define el compilador de C++ que se utilizará.
+
+---
+
+### `CXXFLAGS = -std=c++23 -O3`
 
 Son opciones de compilación:
 
--std=c++23 usa una versión moderna de C++
--O3 hace que el programa funcione de forma más rápida y optimizada
-APP = julia
+* `-std=c++23` → usa una versión moderna de C++
+* `-O3` → optimiza el rendimiento del programa
 
-Es el nombre del programa final que se crea.
+---
 
-GP = julia_set.gp
+### `APP = julia`
 
-Es el archivo que usa gnuplot para generar la gráfica.
+Es el nombre del programa ejecutable final.
 
-all
+---
+
+### `GP = julia_set.gp`
+
+Es el archivo que utiliza gnuplot para generar la gráfica.
+
+---
+
+## Targets principales
+
+### `all`
 
 Es la opción principal.
 
-Cuando se escribe:
+Cuando se ejecuta:
 
+```bash
 make
+```
 
 el Makefile compila, ejecuta el programa, genera la gráfica e intenta abrir la imagen automáticamente.
 
-run
+---
+
+### `run`
 
 Ejecuta el programa:
 
+```bash
 ./julia
+```
 
 Esto genera los datos necesarios para la gráfica.
 
-plot
+---
 
-Usa gnuplot para convertir los datos en una imagen .png.
+### `plot`
 
+Usa gnuplot para convertir los datos en una imagen `.png`.
+
+```bash
 gnuplot julia_set.gp
-open
+```
+
+---
+
+### `open`
 
 Intenta abrir automáticamente la imagen generada.
 
-clean
+---
+
+### `clean`
 
 Borra archivos generados como:
 
-.o
-ejecutable julia
-archivos .txt
-imagen .png
+* `.o`
+* ejecutable `julia`
+* archivos `.txt`
+* imagen `.png`
 
 Sirve para dejar limpio el proyecto.
+
 
 ---
 
