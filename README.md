@@ -391,7 +391,7 @@ Se agregó un archivo `.gitignore` para evitar subir archivos innecesarios al re
 
 # Evidencias
 
-En la carpeta **evidencia** se incluyen capturas de:
+En la carpeta **evidencia** se incluye un PDF con capturas y una breve explicación de:
 
 * ejecución del Makefile de ejemplo (julia)
 * generación de archivos
