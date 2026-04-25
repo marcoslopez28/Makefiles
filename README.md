@@ -87,7 +87,7 @@ Esto realiza automáticamente:
 ls
 ```
 
-Una vez eecutado el Makefile, quí se puede observar la creación de:
+Una vez ejecutado el Makefile, quí se puede observar la creación de:
 
 * `main.o`
 * `julia`
@@ -386,17 +386,6 @@ Esto facilita el desarrollo, reduce errores y mejora la organización del proyec
 # Uso de .gitignore
 
 Se agregó un archivo `.gitignore` para evitar subir archivos innecesarios al repositorio, como ejecutables, archivos objeto y temporales.
-
-Contenido utilizado:
-
-```text
-*.exe
-*.o
-*.log
-*.tmp
-*.bak
-.DS_Store
-```
 
 ---
 
