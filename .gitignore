@@ -1,0 +1,6 @@
+*.exe
+*.o
+*.log
+*.tmp
+*.bak
+.DS_Store
