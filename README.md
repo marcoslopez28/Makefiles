@@ -22,7 +22,7 @@ El proyecto de ejemplo "**julia**" genera el conjunto de Julia, es una represent
 
 La ejecución se realizó en **MSYS2 UCRT64**, ésta es una herramienta que permite usar en Windows una terminal parecida a Linux, junto con compiladores y utilidades que normalmente no vienen instaladas en Windows, ya que este Makefile utiliza sintaxis estilo Linux como `./julia`, la cual funciona mejor en este entorno que en CMD de Windows.
 
-**Nota**Si no se tiene instalado MinGW, se puede seguir esta guía oficial de Visual Studio Code para descargarlo y configurarlo correctamente en Windows:
+**Nota:** Si no se tiene instalado MinGW, se puede seguir esta guía oficial de Visual Studio Code para descargarlo y configurarlo correctamente en Windows:
 
 https://code.visualstudio.com/docs/cpp/config-mingw
 
