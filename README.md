@@ -106,94 +106,62 @@ Esto no afecta el resultado. El error únicamente ocurrió porque MSYS2 no tiene
 
 ## Explicación del Makefile Julia
 
-Se utiliza el comando:
+Este Makefile sirve para automatizar todo el proceso de generar el conjunto de Julia, desde compilar el programa hasta crear la imagen final.
 
-```bash
-cat Makefile
-```
+CXX = g++
 
-para visualizar el contenido y analizar su estructura.
+Indica que se usará el compilador de C++.
 
-### Variables principales
+CXXFLAGS = -std=c++23 -O3
 
-### CXX = g++
+Son opciones de compilación:
 
-Define el compilador de C++ utilizado.
+-std=c++23 usa una versión moderna de C++
+-O3 hace que el programa funcione de forma más rápida y optimizada
+APP = julia
 
-### CXXFLAGS = -std=c++23 -O3
+Es el nombre del programa final que se crea.
 
-Opciones de compilación:
+GP = julia_set.gp
 
-* `-std=c++23` utiliza stánel edar moderno de C++
-* `-O3` aplica una optimización alta del programa
+Es el archivo que usa gnuplot para generar la gráfica.
 
-### GP = julia_set.gp
+all
 
-Archivo de gnuplot utilizado para generar la gráfica.
+Es la opción principal.
+Cuando se escribe:
 
-### APP = julia
+make
 
-Nombre del ejecutable final.
+el Makefile compila, ejecuta el programa, genera la gráfica e intenta abrir la imagen automáticamente.
 
----
+run
 
-## Targets principales
+Ejecuta el programa:
 
-### all
-
-Ejecuta automáticamente:
-
-* run
-* plot
-* open
-
-Es el target principal.
-
----
-
-### run
-
-Ejecuta el programa compilado:
-
-```bash
 ./julia
-```
 
----
+Esto genera los datos necesarios para la gráfica.
 
-### plot
+plot
 
-Genera la imagen final con:
+Usa gnuplot para convertir los datos en una imagen .png.
 
-```bash
 gnuplot julia_set.gp
-```
-
----
-
-### open
+open
 
 Intenta abrir automáticamente la imagen generada.
 
----
+clean
 
-### clean
+Borra archivos generados como:
 
-Elimina todos los archivos generados para dejar limpio el proyecto.
+.o
+ejecutable julia
+archivos .txt
+imagen .png
 
----
-
-## Automatización lograda
-
-Gracias al Makefile no fue necesario ejecutar manualmente todos los comandos de compilación y graficación.
-
-En lugar de escribir múltiples comandos, solo fue necesario ejecutar:
-
-```bash
-make
-```
-
-Esto demuestra cómo el Makefile ayuda a automatizar procesos y facilita el trabajo en proyectos más grandes.
+Sirve para dejar limpio el proyecto.
 
 ---
 
